@@ -338,9 +338,6 @@ def show_summary_result():
         try:
             # Get summary content from API response
             summary_content = st.session_state.summary_result.get('summary', 'No summary available')
-
-            # Display summary with enhanced formatting
-            st.markdown("#### 📊 Comprehensive Document Analysis")
             
             # Create tabs for different view modes
             tab1, tab2 = st.tabs(["📖 Formatted View", "📄 Raw Text"])
