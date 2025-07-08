@@ -17,7 +17,7 @@ A powerful web application to analyze, summarize, and chat with any PDF document
 
 ## 🏗️ Project Structure
 
-```text
+```bash
 main.py                # FastAPI backend entry point
 streamlit_app.py       # Streamlit frontend app
 requirements.txt       # Python dependencies
@@ -37,28 +37,34 @@ app/
 ### 1. Clone the Repository
 
 ```bash
-git clone <repo-url>
-cd pdf-summarizer
+git clone https://github.com/harishivam1411/pdf-analyzer.git
+cd pdf-analyzer
+```
+
+### 2. Install UV
+
+```bash
+pip install uv
 ```
 
 ### 2. Create a Virtual Environment
 
 ```bash
-python -m venv .venv
+uv venv --python 3.12.8
 source .venv/bin/activate  # On Windows use `.venv\Scripts\activate`
 ```
 
 ### 3. Install Dependencies
 
 ```bash
-pip install -r requirements.txt
+uv add -r requirements.txt
 ```
 
 ### 4. Set Environment Variables
 
 Create a `.env` file in the root directory:
 
-```text
+```bash
 OPENAI_API_KEY=YOUR_OPENAI_API_KEY
 EMBEDDING_MODEL=all-MiniLM-L6-v2
 API_BASE_URL=http://127.0.0.1:7000
