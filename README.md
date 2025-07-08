@@ -50,8 +50,7 @@ pip install uv
 ### 2. Create a Virtual Environment
 
 ```bash
-uv venv --python 3.12.8
-source .venv/bin/activate  # On Windows use `.venv\Scripts\activate`
+uv venv 
 ```
 
 ### 3. Install Dependencies
