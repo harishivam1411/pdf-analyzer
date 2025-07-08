@@ -75,13 +75,13 @@ VECTOR_PERSIST=True  # Set to True to enable persistent vector storage with Chro
 ### 5. Start the Backend (FastAPI)
 
 ```bash
-python main.py
+uv run main.py
 ```
 
 ### 6. Start the Frontend (Streamlit)
 
 ```bash
-streamlit run streamlit_app.py
+uv run streamlit run streamlit_app.py
 ```
 
 ## 🖇️ API Endpoints
