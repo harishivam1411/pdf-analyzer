@@ -47,19 +47,7 @@ cd pdf-analyzer
 pip install uv
 ```
 
-### 2. Create a Virtual Environment
-
-```bash
-uv venv 
-```
-
-### 3. Install Dependencies
-
-```bash
-uv add -r requirements.txt
-```
-
-### 4. Set Environment Variables
+### 3. Set Environment Variables
 
 Create a `.env` file in the root directory:
 
@@ -71,13 +59,13 @@ OPENAI_BASE_URL=https://api.openai.com/v1
 VECTOR_PERSIST=True  # Set to True to enable persistent vector storage with ChromaDB, or False to use in-memory storage
 ```
 
-### 5. Start the Backend (FastAPI)
+### 4. Start the Backend (FastAPI)
 
 ```bash
 uv run main.py
 ```
 
-### 6. Start the Frontend (Streamlit)
+### 5. Start the Frontend (Streamlit)
 
 ```bash
 uv run streamlit run streamlit_app.py
