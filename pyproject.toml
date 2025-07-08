@@ -1,9 +1,9 @@
 [project]
-name = "pdf-summarizer"
+name = "pdf-analyzer"
 version = "0.1.0"
-description = "Add your description here"
+description = "Extract and summarize information from PDF documents using LLMs."
 readme = "README.md"
-requires-python = ">=3.12.8"
+requires-python = "3.12.8"
 dependencies = [
     "altair==5.5.0",
     "annotated-types==0.7.0",
