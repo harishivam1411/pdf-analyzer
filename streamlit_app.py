@@ -283,8 +283,6 @@ def show_upload_interface():
     if uploaded_file is not None:
         # Display file info
         file_size_mb = uploaded_file.size / (1024 * 1024)
-        st.success(f"📄 **File uploaded:** {uploaded_file.name}")
-        st.info(f"📊 **Size:** {file_size_mb:.2f} MB | **Type:** {uploaded_file.type}")
 
         # Document type hint
         with st.expander("ℹ️ Document Type Detection", expanded=False):
@@ -555,12 +553,6 @@ def add_sidebar_info():
         - Technical manuals & specifications
         - Policy documents & legal texts
         - Books, articles, presentations, and more
-
-        **💡 Tips:**
-        - Upload your PDF once and both summary and chat modes will be ready
-        - Switch between modes instantly without reprocessing
-        - Use specific questions in chat mode for detailed answers
-        - Export your results in multiple formats
         """)
 
 
