@@ -12,8 +12,6 @@
 2. **Environment variables:**
    - Make sure to create a `.env` file in the project root with your OpenAI API key and other settings (see `README.md` for details).
 
----
-
 ## Deploying your application to the cloud
 
 1. **Build your image for the correct architecture:**
