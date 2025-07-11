@@ -1,0 +1,63 @@
+
+services:
+  backend:
+    build:
+      # Building the Docker image from the current directory
+      context: .
+
+    image: fastapi-backend:0.1.0
+    container_name: fastapi-backend
+    command: uvicorn main:app --host 0.0.0.0 --port 7000
+
+    ports:
+      - "7000:7000"
+
+    env_file:
+      - .env
+      
+    develop:
+      # Automatically watch for file changes and sync them to the container
+      watch:
+        # Sync the working directory with the `/code` directory in the container
+        - action: sync
+          path: .
+          target: /code
+          # Exclude the project virtual environment — it could be for a
+          # different platform in the container
+          ignore:
+            - .venv/
+
+        # Rebuild the image if dependencies change by checking uv.lock
+        - action: rebuild
+          path: ./uv.lock
+
+  frontend:
+    build:
+      context: .
+
+    image: streamlit-frontend:0.1.0
+    container_name: streamlit-frontend
+    command: streamlit run streamlit_app.py
+
+    environment:
+      API_BASE_URL: http://backend:7000
+
+    ports:
+      - "8501:8501"
+
+    env_file:
+      - .env
+
+    depends_on:
+      - backend
+
+    develop:
+      watch:
+        - action: sync
+          path: .
+          target: /code
+          ignore:
+            - .venv/
+
+        - action: rebuild
+          path: ./uv.lock

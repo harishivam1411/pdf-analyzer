@@ -15,23 +15,6 @@ A powerful web application to analyze, summarize, and chat with any PDF document
 - **Robust Error Handling:**
   - Handles timeouts, connection errors, and invalid responses gracefully.
 
-## 🏗️ Project Structure
-
-```bash
-main.py                # FastAPI backend entry point
-streamlit_app.py       # Streamlit frontend app
-requirements.txt       # Python dependencies
-pyproject.toml         # Project metadata
-.env                   # Environment variables
-app/
-  chroma_db/           # ChromaDB for vector storage
-  routers/             # FastAPI routers (chat, pdf, health)
-  services/            # Core logic for PDF, LLM, vector, chat
-  pydantics/           # Pydantic models
-  templates/           # Prompt templates
-  utils/               # Utility files and sample data
-```
-
 ## ⚡ Quick Start
 
 ### 1. Clone the Repository
